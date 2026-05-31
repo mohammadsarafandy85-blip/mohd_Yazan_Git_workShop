@@ -1,29 +1,14 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -std=c99
+CFLAGS = -Wall -Wextra -std=c99 -D_DEFAULT_SOURCE
 RAYLIB_FLAGS = -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
 
-all: milestone3
-
-milestone1:
-	$(CC) $(CFLAGS) step3.c -o dijkstra -lm
-
-milestone2:
-	$(CC) $(CFLAGS) step3.c -o sim $(RAYLIB_FLAGS)
-
-milestone3:
-	$(CC) $(CFLAGS) step3.c -o sim $(RAYLIB_FLAGS)
+all: milestone5
 
 milestone4:
-	$(CC) $(CFLAGS) step3.c -o sim $(RAYLIB_FLAGS)
+	$(CC) $(CFLAGS) step4.c -o sim $(RAYLIB_FLAGS)
 
 milestone5:
-	$(CC) $(CFLAGS) step3.c -o sim $(RAYLIB_FLAGS)
-
-milestone6:
-	$(CC) $(CFLAGS) step3.c -o sim $(RAYLIB_FLAGS)
-
-milestone7:
-	$(CC) $(CFLAGS) step3.c -o sim $(RAYLIB_FLAGS)
+	$(CC) $(CFLAGS) step5.c -o sim $(RAYLIB_FLAGS)
 
 clean:
-	rm -f dijkstra sim *.o
+	rm -f sim dijkstra *.o
